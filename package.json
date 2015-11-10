@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mutation-observer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -9,7 +9,10 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "ember try:testall",
+    "amend": "git add . && git commit --amend --reuse-message=HEAD",
+    "push": "git push --tags && git push",
+    "release": "npm version patch --force && npm run amend && npm run push && npm publish"
   },
   "repository": "",
   "engines": {
@@ -38,7 +41,11 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "mutation-observer",
+    "mutationObserver",
+    "mutation",
+    "observer"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3"

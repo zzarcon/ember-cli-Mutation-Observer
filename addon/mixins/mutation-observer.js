@@ -1,17 +1,16 @@
 /**
  * TODO: 
  *   -Add description
- *   -Check for MutationObserver
  */
 
 import Ember from 'ember';
 
+const hasMutationSupport = !!window.MutationObserver;
 const defaultMutationConfig = {
   attributes: true,
   childList: true,
   characterData: true
 };
-const hasMutationSupport = !!window.MutationObserver;
 
 export default Ember.Mixin.create({
   mutationInstance: null,
@@ -20,7 +19,14 @@ export default Ember.Mixin.create({
   
   setupObserver: Ember.on('didInsertElement', function() {
     var cb = this.get('onMutation');
-    if (!hasMutationSupport || Ember.typeOf(cb) !== 'function') return;
+    
+    if (!hasMutationSupport) {
+      return console.warn("MutationObserverMixin: MutationObserver is not support in this browser");
+    } 
+
+    if (Ember.typeOf(cb) !== 'function') {
+      return console.warn("MutationObserverMixin: 'onMutation' callback it's undefined");
+    }
 
     var target = this.$()[0];     
     var observer = new MutationObserver((mutations) => {

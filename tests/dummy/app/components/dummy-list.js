@@ -6,7 +6,7 @@ export default Ember.Component.extend(mutationObserver, {
 
   onMutation(mutations) {
     console.log('onMutation');
-    
+
     mutations.forEach(function(mutation) {
       console.log(mutation.type);
     });    
