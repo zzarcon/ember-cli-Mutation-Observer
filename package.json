@@ -14,7 +14,10 @@
     "push": "git push --tags && git push",
     "release": "npm version patch --force && npm run amend && npm run push && npm publish"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zzarcon/ember-cli-Mutation-Observer.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
