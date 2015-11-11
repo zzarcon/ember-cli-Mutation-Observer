@@ -48,7 +48,7 @@ export default Ember.Component.extend(mutationObserver, {
 
 You will see something like this for each mutation:
 
-![](asd)
+![](https://raw.github.com/zzarcon/ember-cli-Mutation-Observer/master/showcase/mutation-record.png)
 
 You can also specify the mutation options you want:
 
