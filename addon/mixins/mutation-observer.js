@@ -41,7 +41,7 @@ export default Ember.Mixin.create({
 
   destroyObserver: Ember.on('willDestroyElement', function() {
     var observer = this.get('mutationInstance');
-    if (!observer) return;
+    if (!observer) {return;}
 
     observer.disconnect();
   })
