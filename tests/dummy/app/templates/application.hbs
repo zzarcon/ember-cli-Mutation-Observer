@@ -1,3 +1,15 @@
-{{dummy-list}}
-{{dummy-list-item}}
+<h1>Ember Cli Mutation Observer Demo</h1>
+<div>
+  {{input value=todoName autofocus=true}} <button onclick={{action "addTodo"}}>Add todo</button>
+</div>
+
 {{outlet}}
+{{#dummy-list}}
+  {{#each todos as |todo|}}
+    {{dummy-list-item item=todo}}
+  {{/each}}
+{{/dummy-list}}
+
+<div id="mutations">
+  <p>Mutations:</p>
+</div>

@@ -12,7 +12,8 @@
     "test": "ember try:testall",
     "amend": "git add . && git commit --amend --reuse-message=HEAD",
     "push": "git push --tags && git push",
-    "release": "npm version patch --force && npm run amend && npm run push && npm publish"
+    "release": "npm version patch --force && npm run amend && npm run push && npm publish",
+    "demo_page": "ember github-pages:commit --message 'Update gh-pages'"
   },
   "repository": {
     "type": "git",

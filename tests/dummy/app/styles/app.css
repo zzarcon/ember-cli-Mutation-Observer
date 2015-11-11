@@ -1,0 +1,26 @@
+body{
+  font-family: Verdana;
+}
+
+h1{
+  border-bottom: 1px solid;
+}
+
+.dummy-list{
+  margin: 10px 0;
+}
+
+#mutations{
+  margin: 10px 0;
+  border: 1px solid;
+}
+
+.mutation{
+  border-top: 1px solid;
+  padding: 5px;
+}
+
+p{
+  font-weight: bold;
+  text-align: center;
+}
