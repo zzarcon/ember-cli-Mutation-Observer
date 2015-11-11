@@ -25,7 +25,7 @@ ember install ember-cli-mutation-observer
 
 If you want to have the functionality available in all your components just set the `mutationObserverInjection` flag to `true` in your `environment`. 
 
-Check [this environment example]()
+Check [this environment example](https://github.com/zzarcon/ember-cli-Mutation-Observer/blob/master/tests/dummy/config/environment.js#L9)
 
 
 ## Browser support
