@@ -28,7 +28,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/ember-cli-Mutation-Observer';
   }
 
   return ENV;
