@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/zzarcon/ember-cli-Mutation-Observer.svg)](https://travis-ci.org/zzarcon/ember-cli-Mutation-Observer)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-mutation-observer.svg)](http://emberobserver.com/addons/ember-cli-mutation-observer)
+[![npm version](https://badge.fury.io/js/ember-cli-mutation-observer.svg)](https://badge.fury.io/js/ember-cli-mutation-observer)
 
 # ember-cli-Mutation-Observer 
 
