@@ -20,6 +20,48 @@ ember install ember-cli-mutation-observer
 
 ## Using it as a Mixin
 
+**/app/components/dummy-list.js**
+
+```javascript
+
+import Ember from 'ember';
+import mutationObserver from '../mixins/mutation-observer';
+
+export default Ember.Component.extend(mutationObserver, {
+
+  onMutation(mutations, observer) {
+
+    mutations.forEach(function(mutation) {
+      console.log(mutation.type, mutation.oldValue);
+
+      mutation.addedNodes.forEach(function(record) {
+        console.log(record);
+      });
+    });    
+    
+    //Access to observer methods
+    observer.takeRecords();
+  }
+});
+
+```
+
+You will see something like this for each mutation:
+
+![](asd)
+
+You can also specify the mutation options you want:
+
+```javascript
+export default Ember.Component.extend(mutationObserver, {
+  mutationConfig: {
+    attributes: true,
+    childList: true,
+    characterData: true
+  }
+})
+```
+
 
 ## Use it in all your components
 

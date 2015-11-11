@@ -29,9 +29,7 @@ export default Ember.Mixin.create({
     }
 
     var target = this.$()[0];     
-    var observer = new MutationObserver((mutations) => {
-      cb(mutations); //TODO: return objects in an better way
-    });
+    var observer = new MutationObserver(cb);
     var config = Ember.merge(defaultMutationConfig, this.get('mutationConfig'));
 
     observer.observe(target, config);

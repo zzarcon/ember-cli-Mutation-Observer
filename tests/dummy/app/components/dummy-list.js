@@ -5,10 +5,13 @@ export default Ember.Component.extend(mutationObserver, {
   classNames: ['dummy-list'],
 
   onMutation(mutations) {
-    console.log('onMutation');
-
+    
     mutations.forEach(function(mutation) {
-      console.log(mutation.type);
+      console.log(mutation.type, mutation.oldValue);
+
+      mutation.addedNodes.forEach(function(record) {
+        console.log(record);
+      });
     });    
   }
 });
