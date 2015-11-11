@@ -9,7 +9,7 @@ A lightweight ember addon that provides a event based solution for react when th
 
 ## Installation
 
-Ember Mutation Observer works in Ember **1.13.9+** or **2.0+**, including beta and canary, with no deprecations
+Ember Cli Mutation Observer works in Ember **1.13.9+** or **2.0+**, including beta and canary, with no deprecations
 whatsoever.
 
 
@@ -18,8 +18,16 @@ As any other ember-cli addon, run:
 ember install ember-cli-mutation-observer
 ```
 
+## Using it as a Mixin
+
+
+## Use it in all your components
+
+If you want to have the functionality available in all your components just set the `mutationObserverInjection` flag to `true` in your `environment`. 
+
+Check [this environment example]()
+
+
 ## Browser support
 
 http://caniuse.com/#feat=mutationobserver
-
-## Examples
