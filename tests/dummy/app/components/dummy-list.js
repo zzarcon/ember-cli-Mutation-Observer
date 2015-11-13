@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import mutationObserver from '../mixins/mutation-observer';
+import mutationObserver from 'ember-cli-mutation-observer/mixins/mutation-observer';
 
 export default Ember.Component.extend(mutationObserver, {
   classNames: ['dummy-list'],
@@ -15,7 +15,7 @@ export default Ember.Component.extend(mutationObserver, {
         type: mutation.type,
         oldValue: mutation.oldValue,
         recordsLength: mutation.addedNodes.length
-      }
+      };
     });    
 
     var mutationsString = JSON.stringify(mutations);

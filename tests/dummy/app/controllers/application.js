@@ -1,7 +1,7 @@
 import Ember from "ember";
 
 export default Ember.Controller.extend({
-  todos: Em.A([
+  todos: Ember.A([
     "Buy milk",
     "Clean the room",
     "Learn Ember.js"
