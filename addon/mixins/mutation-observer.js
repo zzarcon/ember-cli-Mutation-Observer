@@ -5,7 +5,8 @@
 
 import Ember from 'ember';
 
-const hasMutationSupport = !!window.MutationObserver;
+const Observer = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+const hasMutationSupport = !!Observer;
 const defaultMutationConfig = {
   attributes: true,
   childList: true,
@@ -29,7 +30,7 @@ export default Ember.Mixin.create({
     }
 
     var target = this.$()[0];     
-    var observer = new MutationObserver(cb);
+    var observer = new Observer(cb);
     var config = Ember.merge(defaultMutationConfig, this.get('mutationConfig'));
 
     observer.observe(target, config);

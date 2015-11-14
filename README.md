@@ -4,7 +4,7 @@
 
 # ember-cli-Mutation-Observer 
 
-> The easiest to subscribe to Dom changes in your ember components
+> The easiest way to subscribe to Dom changes in your ember components
 
 A lightweight ember addon that provides a event based solution for react when the DOM of your components change. It uses [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) to make magic happen. [DEMO](http://zzarcon.github.io/ember-cli-Mutation-Observer)
 
