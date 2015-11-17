@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     },
 
     clear() {
-      this.set('todos', Ember.A())
+      this.set('todos', Ember.A());
     }
   }
 });
