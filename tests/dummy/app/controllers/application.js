@@ -16,6 +16,10 @@ export default Ember.Controller.extend({
 
       this.get('todos').pushObject(todoName);
       this.set('todoName', null);
+    },
+
+    clear() {
+      this.set('todos', Ember.A())
     }
   }
 });
