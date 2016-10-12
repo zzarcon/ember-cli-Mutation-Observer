@@ -22,7 +22,7 @@ export default Ember.Mixin.create({
     var cb = this.get('onMutation');
     
     if (!hasMutationSupport) {
-      return console.warn("MutationObserverMixin: MutationObserver is not support in this browser");
+      return console.warn("MutationObserverMixin: MutationObserver is not supported in this browser");
     } 
 
     if (Ember.typeOf(cb) !== 'function') {
