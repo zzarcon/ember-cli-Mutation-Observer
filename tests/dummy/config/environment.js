@@ -28,6 +28,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/ember-cli-mutation-observer/';
     ENV.baseURL = '/ember-cli-Mutation-Observer';
   }
 
