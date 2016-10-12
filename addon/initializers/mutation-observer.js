@@ -7,11 +7,13 @@
 import Ember from 'ember';
 import mutationObserver from '../mixins/mutation-observer';
 
-export function initialize(container) {
-  let config = container.lookupFactory('config:environment');
+export function initialize(app) {
+  const config = app.lookupFactory ? 
+    app.lookupFactory('config:environment') :
+    app.__container__.lookupFactory('config:environment');
   
   if (!config || !config.mutationObserverInjection) {return;}
-  
+
   Ember.Component.reopen(mutationObserver);
 }
 
