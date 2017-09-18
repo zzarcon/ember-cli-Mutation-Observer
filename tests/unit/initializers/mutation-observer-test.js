@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sinon from 'sinon';
 import { initialize } from 'dummy/initializers/mutation-observer';
 import { module, test } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
@@ -17,8 +18,12 @@ module('Unit | Initializer | mutation-observer', {
 
 // Replace this with your real tests.
 test('it works', function(assert) {
+  const spy = sinon.spy(Ember.Component, 'reopen');
+
   initialize(this.application);
 
-  // you would normally confirm the results of the initializer here
-  assert.ok(true);
+  // Without specific config, the mixin will not be injected in all Components
+  assert.notOk(spy.called);
+
+  Ember.Component.reopen.restore();
 });
