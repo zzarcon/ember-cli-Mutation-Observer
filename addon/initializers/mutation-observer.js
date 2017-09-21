@@ -8,10 +8,17 @@ import Ember from 'ember';
 import mutationObserver from '../mixins/mutation-observer';
 
 export function initialize(app) {
-  const config = app.lookupFactory ? 
-    app.lookupFactory('config:environment') :
-    app.__container__.lookupFactory('config:environment');
-  
+  let config;
+  try {
+    // Ember 2.15+
+    config = app.resolveRegistration('config:environment');
+  } catch (e) {
+    // Older Ember approach
+    config = app.lookupFactory ?
+      app.lookupFactory('config:environment') :
+      app.__container__.lookupFactory('config:environment');
+  }
+
   if (!config || !config.mutationObserverInjection) {return;}
 
   Ember.Component.reopen(mutationObserver);
